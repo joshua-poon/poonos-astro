@@ -5,7 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	output: 'static',
-	base: '/poonos-astro/'
-
+	site: 'https://example.com',
+	integrations: [mdx(), sitemap()]
 });
