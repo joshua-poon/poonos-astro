@@ -10,9 +10,10 @@ import { Image } from "astro:assets";
 const posts = (await getCollection("opinion")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const SITE_TITLE = "Opinion";
 ---
 
-<!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />

@@ -10,6 +10,8 @@ import { Image } from "astro:assets";
 const posts = (await getCollection("medicine")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const SITE_TITLE = "Medicine";
 ---
 
 <!doctype html>

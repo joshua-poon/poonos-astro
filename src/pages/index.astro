@@ -2,6 +2,9 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import LatestPost from "../components/LatestPost.astro";
+import ContactForm from "../components/ContactForm.astro";
+
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -13,6 +16,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 	<body>
 		<Header />
 		<main>
+			<LatestPost />
 			<h3>
 				👋 Hello! I'm Josh, a final year medical student from Australia.
 			</h3>
@@ -52,11 +56,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 				</li>
 			</ul>
 			<p>
-				You are very welcome to contact me, including for tutoring
-				enquiries, through the form below. I'd love to hear your
-				thoughts![Sitemap]
+				Subscribe below! You are also very welcome to contact me about
+				anything, including feedback comments, and tutoring enquiries,
+				through the form below. I'd love to hear your thoughts!
 			</p>
+			<ContactForm />
+			<Footer />
 		</main>
-		<Footer />
 	</body>
 </html>

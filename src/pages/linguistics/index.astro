@@ -10,6 +10,8 @@ import { Image } from "astro:assets";
 const posts = (await getCollection("linguistics")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const SITE_TITLE = "Linguistics";
 ---
 
 <!doctype html>

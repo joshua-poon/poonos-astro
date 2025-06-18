@@ -1,0 +1,101 @@
+---
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("medicine");
+
+const [mostRecentPost] = allPosts.sort(
+    (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate),
+);
+---
+
+<section class="latest-post">
+    <h2>Latest Post</h2>
+
+    <article>
+        {
+            mostRecentPost.data.image && (
+                <img
+                    src={mostRecentPost.data.image}
+                    alt={mostRecentPost.data.title}
+                    loading="lazy"
+                    style="max-width: 100%; border-radius: 8px; margin-bottom: 1rem;"
+                />
+            )
+        }
+
+        <h3>
+            <a href={`/medicine/${mostRecentPost.slug}/`}>
+                {mostRecentPost.data.title}
+            </a>
+        </h3>
+
+        <p class="post-date">
+            {new Date(mostRecentPost.data.pubDate).toLocaleDateString()}
+        </p>
+
+        <p class="post-description">{mostRecentPost.data.description}</p>
+
+        <a class="read-more" href={`/medicine/${mostRecentPost.slug}/`}>
+            Read more →
+        </a>
+    </article>
+
+    <style>
+        .latest-post {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: system-ui, sans-serif;
+        }
+
+        .latest-post h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .latest-post h3 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        .latest-post h3 a {
+            text-decoration: none;
+            color: #0077cc;
+            cursor: pointer;
+        }
+
+        .latest-post h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .post-date {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-description {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .read-more {
+            display: inline-block;
+            font-size: 0.95rem;
+            color: #0077cc;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</section>
