@@ -30,9 +30,9 @@ const medicine = defineCollection({
 });
 
 
-const opinion = defineCollection({
-	// Load Markdown and MDX files in the `src/content/opinion/` directory.
-	loader: glob({ base: './src/content/opinion', pattern: '**/*.{md,mdx}' }),
+const blog = defineCollection({
+	// Load Markdown and MDX files in the `src/content/blog/` directory.
+	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
 	// Type-check frontmatter using a schema
 	schema: ({ image }) => z.object({
 		title: z.string(),
@@ -41,7 +41,8 @@ const opinion = defineCollection({
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		heroImage: image().optional(),
+		category: z.string().optional()
 	}),
 });
 
-export const collections = { linguistics, medicine, opinion, };
+export const collections = { linguistics, medicine, blog, };

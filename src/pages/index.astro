@@ -16,50 +16,56 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 	<body>
 		<Header />
 		<main>
+			<h4>Latest Posts</h4>
 			<LatestPost />
-			<h3>
+			<br />
+			<h4>
 				👋 Hello! I'm Josh, a final year medical student from Australia.
-			</h3>
-			<p>
-				During the week, I enjoy playing netball, youth leading at my
-				church, and learning as much about the world as I can,
-				especially about history, linguistics and current affairs.
-			</p>
+			</h4>
 			<p>
 				I started this blog in 2021 as a means to build up my written
 				expression, formulate opinions better and share my interests
-				with others. I write on various topics, which are separated into
-				three categories.
+				with others.
+			</p>
+			<p>
+				I use the static site generator Astro to build my site, with
+				main pages written in HTML/CSS and blog posts in Markdown. I use
+				GitHub to store my code repository and Netlify to host my site.
+			</p>
+			<p>
+				Each post I write on falls under a category, which can be
+				clicked on in the <a href="/blog">Blog</a>. Some topics I write
+				on include:
 			</p>
 			<ul>
 				<li>
-					As a full time medical student, my <a href="/medicine"
-						>medical studies</a
-					> play a big part in my life. I enjoy writing about the rotations
+					As a full time medical student, my medical studies play a
+					big part in my life. I enjoy writing about the rotations
 					I've done and observations on placement.
 				</li>
 
 				<li>
 					I love learning in my spare time, especially about history
-					and <a href="/linguistics">linguistics</a>. Furthermore, <a
-						href="/linguistics/2021-11-05-tutoring"
+					and linguistics. Furthermore, <a
+						href="/blog/2021-11-05-tutoring"
 						>here are details about my Latin tutoring services.</a
 					>
 				</li>
 
 				<li>
-					Finally, I write <a href="/opinion"
-						>opinion pieces about pretty much anything</a
-					> - from movie reviews and current affairs events, to memories
-					growing up in Australia and holiday destinations - there are
-					no limits within this category!
+					I write about life - whether it be memories growing up, or
+					opinion pieces about pretty much anything from movie reviews
+					to current affairs events - there are no limits within this
+					category!
 				</li>
 			</ul>
+			<h4>Susbscribe or contact me</h4>
 			<p>
-				Subscribe below! You are also very welcome to contact me about
+				Through the form, you are very welcome to contact me about
 				anything, including feedback comments, and tutoring enquiries,
 				through the form below. I'd love to hear your thoughts!
 			</p>
+
 			<ContactForm />
 			<Footer />
 		</main>

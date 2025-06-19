@@ -1,74 +1,72 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 
-const allPosts = await getCollection("medicine");
+const allPosts = await getCollection("blog");
 
-const [mostRecentPost] = allPosts.sort(
-    (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate),
-);
+const latestPosts = allPosts
+    .sort(
+        (a, b) =>
+            new Date(b.data.pubDate).getTime() -
+            new Date(a.data.pubDate).getTime(),
+    )
+    .slice(0, 2);
 ---
 
-<section class="latest-post">
-    <h2>Latest Post</h2>
-
-    <article>
+<section class="latest-posts" style="max-width: 700px; margin: auto;">
+    <div class="post-grid">
         {
-            mostRecentPost.data.image && (
-                <img
-                    src={mostRecentPost.data.image}
-                    alt={mostRecentPost.data.title}
-                    loading="lazy"
-                    style="max-width: 100%; border-radius: 8px; margin-bottom: 1rem;"
-                />
-            )
+            latestPosts.map((post) => (
+                <article class="post-card" key={post.id}>
+                    {post.data.heroImage && (
+                        <Image
+                            src={post.data.heroImage}
+                            alt={post.data.title}
+                            loading="lazy"
+                            width={720}
+                            height={360}
+                            style="width: 100%; border-radius: 8px; margin-bottom: 1rem;"
+                        />
+                    )}
+
+                    <h3>
+                        <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+                    </h3>
+
+                    <p class="post-date">
+                        {new Date(post.data.pubDate).toLocaleDateString()}
+                    </p>
+                </article>
+            ))
         }
-
-        <h3>
-            <a href={`/medicine/${mostRecentPost.slug}/`}>
-                {mostRecentPost.data.title}
-            </a>
-        </h3>
-
-        <p class="post-date">
-            {new Date(mostRecentPost.data.pubDate).toLocaleDateString()}
-        </p>
-
-        <p class="post-description">{mostRecentPost.data.description}</p>
-
-        <a class="read-more" href={`/medicine/${mostRecentPost.slug}/`}>
-            Read more →
-        </a>
-    </article>
+    </div>
 
     <style>
-        .latest-post {
-            max-width: 700px;
-            margin: 2rem auto;
-            padding: 1.5rem;
-            background: #f9f9f9;
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .post-card {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 1rem;
             border-radius: 8px;
-            border: 1px solid #ddd;
-            font-family: system-ui, sans-serif;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
 
-        .latest-post h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            text-align: center;
+        .post-card h3 {
+            font-size: 1.2rem; /* Smaller title */
+            margin: 0 0 0.5rem 0;
         }
 
-        .latest-post h3 {
-            margin: 0;
-            font-size: 1.4rem;
-        }
-
-        .latest-post h3 a {
+        .post-card h3 a {
             text-decoration: none;
             color: #0077cc;
-            cursor: pointer;
         }
 
-        .latest-post h3 a:hover {
+        .post-card h3 a:hover {
             text-decoration: underline;
         }
 
@@ -79,19 +77,10 @@ const [mostRecentPost] = allPosts.sort(
             margin-bottom: 1rem;
         }
 
-        .post-description {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
         .read-more {
-            display: inline-block;
-            font-size: 0.95rem;
             color: #0077cc;
-            text-decoration: none;
             font-weight: bold;
-            cursor: pointer;
+            text-decoration: none;
         }
 
         .read-more:hover {
