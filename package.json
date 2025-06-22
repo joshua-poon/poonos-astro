@@ -13,6 +13,8 @@
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.4.1",
     "astro": "^5.10.0",
+    "remark-directive": "^4.0.0",
+    "remark-toc": "^9.0.0",
     "sharp": "^0.34.2"
   },
   "devDependencies": {
