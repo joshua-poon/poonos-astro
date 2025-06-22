@@ -25,12 +25,12 @@ const latestPosts = allPosts
                             loading="lazy"
                             width={720}
                             height={360}
-                            style="width: 100%; border-radius: 8px; margin-bottom: 1rem;"
+                            style="width: 100%; border-radius: 8px; margin-bottom: 1rem; height: 200px; object-fit: cover;"
                         />
                     )}
 
                     <h3>
-                        <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+                        <a href={`/blog/${post.id}/`}>{post.data.title}</a>
                     </h3>
 
                     <p class="post-date">
