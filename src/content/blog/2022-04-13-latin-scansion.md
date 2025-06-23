@@ -3,7 +3,7 @@ title:  "A guide to Latin scansion for dactylic hexameter"
 description:  "A guide to Latin scansion for dactylic hexameter"
 pubDate: "Jan 26, 2022"
 updatedDate: "Sep 24, 2023"
-category: "Linguistics"
+category: "Latin Tutoring"
 heroImage: "../../assets/cicero.jpg"
 
 ---
@@ -25,8 +25,7 @@ The Aeneid uses dactylic hexameter.
 
 _ is called a *macron* and indicates a long vowel, u indicates a short vowel
 
-## Overall guide to scansion
-
+## Scansion Process
 Remember: scansion and meter do not change the pronunciation of the line
 
 *Marking the syllables*
@@ -34,17 +33,31 @@ Remember: scansion and meter do not change the pronunciation of the line
 2. mark the vowels that are *long by position* (a vowel followed by two consonants)
 3. (optional, if the line is difficult) mark the vowel that are long or short by nature. For example, diphthongs are usually long, 'que' is usually short and 'o' at the end of a word is usually long. The patterns just has to be memorised. A dictionary will help.
 
+
 *Scanning the line*
+
 4. scan the 6th feet, which is two syllables (always spondee or trochee)
 5. scan the 5th feet, which is three syllables (always dactyl). The rest of the sentence is now separated into 4 feet.
 6. deduce the dactyls and spondees through logic, for example, if the second last syllable of what is remaining is long, then the last syllable must also be long (to create a spondee).
 
 *Putting in the Caesura*
+
 7. Put in the Caesura
 
-## Vowels
-### Classification
+## Vowels and consonants
+### What are the vowels?
 The Latin vowels are a, e, i, o, u, y (present in Greek words).
+
+### What are the consonants?
+
+| Letter   | Consonant Status |
+| --------- | -------- |
+| h | not a consonant |
+| th, ph, ch | a single consonant (from Greek) |
+| qu, gu (u is not a vowel, but part of the consonant) | a single consonant |
+| i, u (when followed by a vowel and at start of the word) | can become a consonant |
+| pr, pl, br, tr, dr, cr, cl, gr, fr, fl (mutes b, c, d, f, g, p, t followed by liquids l, r) | single consonant |
+
 
 ### The letter i
 - If i is the first letter of the word, and followed by a vowel (u, a, e), then the 'i' is a consonant. For example, 'Iulius' is pronounced 'Yulius', or 'iam' is pronounced 'yam'
@@ -56,33 +69,10 @@ The Latin vowels are a, e, i, o, u, y (present in Greek words).
 - Not all occurrences of these vowels together are diphthongs eg puella or aer
 - diphthongs are always long except when it is an open syllable (followed by another vowel); ae in praeacutus is short
 
-<h3>Vowel classification</h3>
-<table>
-<tr>
-<td>h</td>
-<td>not a consonant</td>
-</tr>
-<tr>
-<td>th, ph, ch</td>
-<td>a single consonant</td>
-</tr>
-<tr>
-<td>qu, gu (u is not a vowel, but part of the consonant)</td>
-<td>a single consonant</td>
-</tr>
-<tr>
-<td>i, u (when followed by a vowel and at start of word)</td>
-<td>can become a consonant</td>
-</tr>
-<tr>
-<td>pr, pl, br, tr, dr, cr, cl, gr, fr, fl (mutes b, c, d, f, g, p, t followed by liquids l, r)	</td>
-<td>single consonant</td>
-</tr>
-</table>
+
+
 
 ### Vowel that is long by position
-
-A vowel is long based on its position in the sentence.
 
 A vowel directly followed by two consonants (according to the consonant classifications above) is long. These consonants do not have to be in the same word as the vowel.
 

@@ -2,7 +2,7 @@
 title: "Latin Almanac: Guide to Twelve Important Constructions in Latin"
 description: "Latin Almanac: Guide to Twelve Important Constructions in Latin"
 pubDate: "Mar 5, 2023"
-category: "Linguistics"
+category: "Latin Tutoring"
 heroImage: "../../assets/cicero.jpg"
 
 ---

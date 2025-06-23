@@ -2,7 +2,7 @@
 title: "A guide to the entire Latin course - my notes from an hour of tutoring"
 description: "A guide to the entire Latin course - my notes from an hour of tutoring"
 pubDate: "Apr 21, 2022"
-category: "Linguistics"
+category: "Latin Tutoring"
 heroImage: "../../assets/cicero.jpg"
 
 ---
